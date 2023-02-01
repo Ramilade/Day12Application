@@ -42,13 +42,17 @@ class PlayerRepositoryTest {
   public void testAddPlayer() {
     Player player = playerRepository.save(new Player("dd"));
     //Q1: What's the difference between the player we add, and the player returned by the save method?
-    //Q2: Write the test
+    assertTrue(player.getId()>0);
+    long count = playerRepository.count();
+    assertEquals(4,count);
   }
 
   @Test
   public void testFindPlayerByName() {
     // Q1: Write this test if you can. If not implement the missing parts
     // Q2: Can You find player "dd" if this test runs after the previous test
+    Player p = playerRepository.findPlayerByName("bb");
+    assertEquals("bb", p.getName());
   }
 }
 

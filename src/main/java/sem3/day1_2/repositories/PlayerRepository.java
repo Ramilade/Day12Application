@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import sem3.day1_2.entity.Player;
 
 public interface PlayerRepository extends JpaRepository<Player,Integer> {
+  Player findPlayerByName(String name);
 }
