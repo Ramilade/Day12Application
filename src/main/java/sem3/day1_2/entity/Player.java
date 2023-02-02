@@ -1,6 +1,11 @@
 package sem3.day1_2.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
 
 @Entity(name = "spiller")
 public class Player {
